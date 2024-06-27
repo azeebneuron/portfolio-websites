@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Gill Sans MT", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  background-color: #210002;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+}
+
+.parallax-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  bottom: 0;
+  transform: scale(1.2);
+}
+
+.richtext-section {
+  position: relative;
+  z-index: 9;
+  background-color: #210002;
+}
+
+.project-section {
+  position: relative;
+  z-index: 9;
+  background-color: #210002;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* adding skills and about me */
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  text-align: center;
+  color: floralwhite;
+}
+
+.main-content h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4em;
+  margin-bottom: 0.2em;
+  /* color: #FEDCC8; */
+  background: linear-gradient(to right, #f77103 , #fff);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+
+.main-content p {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color:#FEDCC8;
+}
+
+.features {
+  width: 75vw;
+  height: 50vh;
+  display: grid;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+
+.feature {
+  --x-px: calc(var(--x) * 1px);
+  --y-px: calc(var(--y) * 1px);
+  --border: 2px;
+  background: rgba(255, 255, 255, 0.125);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    border-radius: inherit;
+    background: radial-gradient(
+      800px circle at var(--x-px) var(--y-px),
+      #f77103,
+      transparent 40%
+    );
+  }
+
+  &:before {
+    z-index: 1;
+  }
+
+  &:after {
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}
+
+.feature-content {
+  background: #210002;
+  border-radius: inherit;
+  color: #FEDCC8;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  inset: var(--border);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 0.3rem;
+  padding: 0 1rem 0 1rem;
+
+  > strong {
+    align-self: self-end;
+    font-size: 125%;
+  }
+
+  > span {
+    opacity: 0.7;
+  }
+}
+
+/* add project cards */
+/* .test{
+  text-align: center;
+  margin: auto;
+  padding-top: 85px;
+  padding-bottom: 80px;
+} */
+
+.container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 85px;
+  padding-bottom: 80px;
+  margin: auto;
+  gap: 50px;
+}
+
+/* testing morre cards */
+
+.card-2 {
+  position: relative  ;
+  width: 300px;
+  height: 400px;
+  color: #000;
+  background: url("images/temp.jpg") center no-repeat;
+  background-size: cover;
+
+  border-radius: 15px;
+  box-shadow: 20px 20px 30px -20px #000000;
+  
+  overflow: hidden;
+  margin: 0%;
+  
+}
+
+.card-content2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  transform: translateY(65%);
+  transition: transform .25s;
+}
+.card-content2:before{
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #fff;
+}
+
+.card-title{
+  color: #210002;
+  line-height: 10px;
+}
+
+.card-subtitle{
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card-description{
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.card-2:hover .card-content2{
+  transform: translateY(0);
+}
+.card-2:hover .card-description{
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+/* adding buttons */
+
+.card-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.github-button,
+.working-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #ffaf1b; /* Green border */
+  color: #ffaf1b; /* Green text */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.github-button:hover,
+.working-button:hover {
+  background-color: #ffaf1b; /* Green background on hover */
+  color: #fff; /* White text on hover */
+  border-color: #ffaf1b; /* Green border on hover */
+}
+
+
