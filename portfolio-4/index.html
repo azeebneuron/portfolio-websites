@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SonOfSonOfAnton</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <section class="parallax">
+
+      <!-- adding navbar -->
+
+      <img
+        src="./images/parallax-image-1.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="2"
+      />
+      <img
+        src="./images/parallax-image-2.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="5"
+      />
+      <img
+        src="./images/parallax-image-3.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="11"
+      />
+      <img
+        src="./images/parallax-image-4.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="16"
+      />
+      <img
+        src="./images/parallax-image-5.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="26"
+      />
+      <img
+        src="./images/parallax-image-6.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="36"
+      />
+      <img
+        src="./images/parallax-image-7.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="49"
+      />
+      <img
+        src="./images/parallax-image-8.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="69"
+      />
+      <img
+        src="./images/parallax-image-9.png"
+        alt="Parallax Image"
+        class="parallax-image"
+        data-speed="100"
+      />
+
+    </section>
+    <section class="richtext-section">
+      <div class="container">
+
+      <!-- Add aboutme -->
+      
+        <div class="main-content">
+          <h1>Hello there! I'm Rahul.</h1>
+          <p>Specializing in Machine Learning & Deep Learning with a touch of Web and Robotics.</p>
+        </div>
+
+        <!-- add skills -->
+
+        <div class="features">
+            <div class="feature">
+              <a href="#" class="feature-content">
+                <strong>Machine Learning</strong>
+                <span>supervised learning: regression, classification, decision trees; unsupervised learning: clustering, dimensionality reduction</span>
+              </a>
+            </div>
+            <div class="feature">
+              <a href="#" class="feature-content">
+                <strong>Deep Learning</strong>
+                <span>CNNs for image recognition and LSTMs for sequence analysis. TensorFlow and PyTorch are my go-to frameworks.</span>
+              </a>
+            </div>
+            <div class="feature">
+              <a href="#" class="feature-content">
+                <strong>Data Science</strong>
+                <span>Data cleaning, Transformation, Feature Engineering, Data Analysis; Numpy, Pandas, Tableau</span>
+              </a>
+            </div>
+            <div class="feature">
+              <a href="#" class="feature-content">
+                <strong>Frontend</strong>
+                <span>HTML, CSS, Javascript; Started React in December, studied it for 2 days, can make a button ;)</span>
+              </a>
+            </div>
+            <div class="feature">
+              <a href="#" class="feature-content">
+                <strong>Backend</strong>
+                <span>Flask, MySQL, PostgreSQL, SQLAlchemy, ORM, Linux/Bash; Arch Linux user, because why not?</span>
+              </a>
+            </div>
+            <div class="feature">
+              <a href="#" class="feature-content">
+                <strong>Robotics</strong>
+                <span>ROS2, Gazebo, Rasberry-pi</span>
+              </a>
+            </div>
+        </div>
+
+        <div class="container-2">
+
+        <!-- add project Cards here -->
+        <!-- <div class="test"> <h1>Boyzz doing well<br>haloo</h1></div> -->
+        <h1 class="title">These are my Projects</h1>
+        <div class="slider" x-data="{start: true, end: false}">
+          <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1599422314077-f4dfdaa4cd09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project1</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project2</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1608501821300-4f99e58bba77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAxfHxhYnN0cmFjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project3</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project4</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project5</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1555448248-2571daf6344b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project6</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project7</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1608501821300-4f99e58bba77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAxfHxhYnN0cmFjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project8</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project9</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project10</h2>
+              </div>
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="https://images.unsplash.com/photo-1555448248-2571daf6344b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image">
+              <div class="slider__info">
+                <h2>Project11</h2>
+              </div>
+            </div>
+          </div>
+          <div class="slider__nav">
+            <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+            <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+          </div>
+        </div>
+
+
+<!-- I dont think this is looking good -->
+<!-- will have to add sliders -->
+
+        </div>
+
+
+
+          <!-- end of projects -->
+          <!-- for now -->
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
